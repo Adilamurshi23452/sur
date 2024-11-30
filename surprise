@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Love 💖</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f7f7f7;
+            color: #333;
+            padding: 50px;
+        }
+        h1 {
+            color: #e63946;
+        }
+        .message {
+            font-size: 24px;
+            line-height: 1.6;
+            margin-top: 20px;
+            display: none;
+        }
+        .scroll-message {
+            margin-top: 30px;
+            font-size: 22px;
+            color: #333;
+            overflow-y: auto;
+            height: 150px;
+            padding: 15px;
+            border: 2px solid #e63946;
+            margin-bottom: 30px;
+            background-color: #fff;
+        }
+        select {
+            padding: 10px;
+            font-size: 18px;
+            margin-top: 30px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .heart {
+            font-size: 50px;
+            color: #e63946;
+            display: none;
+        }
+        .surprise-message {
+            font-size: 18px;
+            color: #e63946;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .proud-message {
+            font-size: 20px;
+            color: #2a9d8f;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>To My Beautiful Girlfriend 💖</h1>
+
+    <div class="scroll-message">
+        <p>Sweetheart, every day I think about you and how lucky I am to have you in my life. Distance may separate us, but my love for you only grows stronger every single day.</p>
+        <p>You are not just my love; you're my best friend, my support, and the reason for my happiness. I am so incredibly proud of you, and I want you to know that no matter what, I believe in you and your dreams!</p>
+        <p>Keep shining, keep being the amazing person you are, and know that I will always be here cheering for you. 💕</p>
+    </div>
+
+    <select id="loveSelector">
+        <option value="0">Choose a love symbol... ❤️</option>
+        <option value="1">❤️</option>
+        <option value="2">💖</option>
+        <option value="3">💘</option>
+        <option value="4">💝</option>
+    </select>
+
+    <div class="message">
+        <p>💖 You mean the world to me. No distance is too far when our hearts are connected. I love you more than words can express.</p>
+        <p>I am proud of the person you are, proud of your achievements, and proud to call you mine. 💘</p>
+        <p>Can't wait to be with you again! 💝</p>
+    </div>
+
+    <div class="heart" id="heartIcon">❤️</div>
+
+    <div class="surprise-message">
+        Surprise! 😘
+    </div>
+
+    <div class="proud-message">
+        I'm incredibly proud of you for everything you’ve accomplished! Keep going, and remember, I'm always here, cheering you on. 🌟
+    </div>
+
+    <script>
+        // Show the scrollable message after a brief delay
+        window.onload = function() {
+            setTimeout(function() {
+                document.querySelector('.message').style.display = 'block';
+                document.querySelector('.scroll-message').style.display = 'block';
+                document.querySelector('.surprise-message').style.display = 'block';
+                document.querySelector('.proud-message').style.display = 'block';
+            }, 2000); // Delay in showing the message
+        };
+
+        // Show a heart when a selection is made
+        document.getElementById('loveSelector').addEventListener('change', function() {
+            var heart = document.getElementById('heartIcon');
+            var selectedValue = this.value;
+            if (selectedValue == '1') {
+                heart.innerHTML = '❤️';
+            } else if (selectedValue == '2') {
+                heart.innerHTML = '💖';
+            } else if (selectedValue == '3') {
+                heart.innerHTML = '💘';
+            } else if (selectedValue == '4') {
+                heart.innerHTML = '💝';
+            } else {
+                heart.innerHTML = '';
+            }
+            heart.style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
